@@ -10,7 +10,7 @@
   "nugetPackageVersion": {
     "semVer": 2
   }
-  "release" : {
+  "release": {
     "branchName" : "rel/v{version}",
     "versionIncrement" : "minor",
     "firstUnstableTag" : "prerelease"
