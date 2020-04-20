@@ -9,7 +9,7 @@
   ],
   "nugetPackageVersion": {
     "semVer": 2
-  }
+  },
   "release": {
     "branchName" : "rel/v{version}",
     "versionIncrement" : "minor",
