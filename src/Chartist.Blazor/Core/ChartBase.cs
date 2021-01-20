@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
 using Microsoft.AspNetCore.Components;
@@ -10,9 +8,9 @@ namespace Chartist.Blazor.Core
 {
     public abstract class ChartBase : ComponentBase
     {
-        [Parameter(CaptureUnmatchedValues = true)] 
-        public Dictionary<string,object> ExtraAttributes { get; set; }
-        
+        [Parameter(CaptureUnmatchedValues = true)]
+        public Dictionary<string, object> ExtraAttributes { get; set; }
+
         [Parameter]
         public EventCallback<ChartistMouseEventArgs> OnDataPointClicked { get; set; }
 

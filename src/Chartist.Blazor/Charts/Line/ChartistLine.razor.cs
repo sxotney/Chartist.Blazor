@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
 using Chartist.Blazor.Core;
@@ -14,9 +12,9 @@ namespace Chartist.Blazor.Charts
     public partial class ChartistLine : ChartBase
     {
         [Inject]
-        private IJSRuntime JS { get; set; }        
+        private IJSRuntime JS { get; set; }
 
-        [Parameter] 
+        [Parameter]
         public RenderFragment ChildContent { get; set; }
 
         [Parameter]
@@ -25,18 +23,18 @@ namespace Chartist.Blazor.Charts
         [Parameter]
         public LineOptions Options { get; set; } = new LineOptions();
 
-        
+
         [Parameter]
         public List<string> Labels { get; set; }
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
             Data.Labels = Labels ?? Data.Labels;
-            
-            var objectRef = DotNetObjectReference.Create(this);           
+
+            var objectRef = DotNetObjectReference.Create(this);
 
             if (firstRender)
-            {                
+            {
                 await JS.InvokeVoidAsync("bizzyChartist.createChart", "Line", elem, Data, Options, objectRef);
             }
 

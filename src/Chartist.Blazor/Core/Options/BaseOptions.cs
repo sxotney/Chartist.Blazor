@@ -68,5 +68,7 @@
         public double? Low { get; set; }
 
         */
+
+        public bool ShowLegend { get; set; } = false;
     }
 }

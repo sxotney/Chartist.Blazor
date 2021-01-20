@@ -14,6 +14,6 @@ namespace Chartist.Blazor.Core.Data
         /// The labels.
         /// </value>
         public List<string> Labels { get; set; }
-        
+
     }
 }

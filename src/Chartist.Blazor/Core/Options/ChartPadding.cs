@@ -1,4 +1,5 @@
-﻿namespace Chartist.Blazor {
+﻿namespace Chartist.Blazor
+{
     /// <summary>
     /// Defines a chart's padding
     /// </summary>

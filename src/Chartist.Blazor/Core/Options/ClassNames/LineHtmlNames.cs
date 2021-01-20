@@ -1,4 +1,4 @@
-﻿namespace Chartist.Blazor 
+﻿namespace Chartist.Blazor
 {
     /// <summary>
     /// Defines the html class names that apply styling to a Line chart
@@ -39,7 +39,7 @@
         public LineHtmlNames()
         {
             Chart = "ct-chart-line";
-        } 
+        }
 
         #endregion
     }

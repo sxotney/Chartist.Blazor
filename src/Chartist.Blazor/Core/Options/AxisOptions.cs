@@ -94,7 +94,7 @@
         public static AxisOptions Load(string axis) =>
             axis switch
             {
-                "y" => new AxisOptions 
+                "y" => new AxisOptions
                 {
                     Position = "start"
                 },

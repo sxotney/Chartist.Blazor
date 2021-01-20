@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
 using Chartist.Blazor.Core;
@@ -14,9 +12,9 @@ namespace Chartist.Blazor.Charts
     public partial class ChartistBar : ChartBase
     {
         [Inject]
-        private IJSRuntime JS { get; set; }       
+        private IJSRuntime JS { get; set; }
 
-        [Parameter] 
+        [Parameter]
         public RenderFragment ChildContent { get; set; }
 
         [Parameter]
@@ -26,18 +24,18 @@ namespace Chartist.Blazor.Charts
         public BarOptions Options { get; set; } = new BarOptions();
 
         [Parameter]
-        public List<string> Labels {get; set;} 
-             
+        public List<string> Labels { get; set; }
+
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
 
             Data.Labels = Labels ?? Data.Labels;
 
             var objectRef = DotNetObjectReference.Create(this);
-            
-            if (Options.HorizontalBars)            
+
+            if (Options.HorizontalBars)
                 Data.Series.ForEach(s =>
-                    s.SeriesPoints.ForEach(d => d.SwapPoints()));                    
+                    s.SeriesPoints.ForEach(d => d.SwapPoints()));
 
             if (firstRender)
             {

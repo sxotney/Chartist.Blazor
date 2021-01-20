@@ -1,6 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Emit;
 
 namespace Chartist.Blazor.Core.Data
 {
@@ -11,10 +9,11 @@ namespace Chartist.Blazor.Core.Data
             //arrange            
             var seriesPoints = new List<SeriesPoint>();
 
-            
+
             int i = 0;
             //assert
-            foreach (var items in list) {
+            foreach (var items in list)
+            {
 
                 seriesPoints.Add(new SeriesPoint { Y = list[i], Meta = new PointMetaInfo() });
                 i++;
@@ -22,7 +21,7 @@ namespace Chartist.Blazor.Core.Data
 
             series.Add(new SeriesData { SeriesPoints = seriesPoints, Name = name });
 
-            
+
 
         }
 
@@ -110,8 +109,8 @@ namespace Chartist.Blazor.Core.Data
 
         }
 
-        
+
     }
 
-        
+
 }

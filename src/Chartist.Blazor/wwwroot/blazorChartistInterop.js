@@ -3,9 +3,12 @@
    
 
     createChart(type, elem, data, options, instance) {
+        if (options.showLegend)
+        {
+            options.plugins = [Chartist.plugins.legend()];
+        }
         var chart;
         bizzyChartist.data = data;
-        console.log(data);
         switch (type) {
             case "Bar":
                 chart = Chartist.Bar(elem, { series: [] }, options);
@@ -71,8 +74,7 @@
     updateChart(elem, data, options, instance) {   
        bizzyChartist.data = data;
        elem['_chart'].update(data, options);
-       console.log("Chart created");
-       console.log(elem['_chart']);
+       
                    
     };
 
