@@ -1,3 +1,5 @@
+# THIS IS A READ ONLY REPO - MAINTENANCE HAPPENS [HERE](https://github.com/UnlockedData/UnlockedData.Chartist.Blazor)
+
 # UnlockedData.Chartist.Blazor
 
 A Blazor implementation of ChartistJS
